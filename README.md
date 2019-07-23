@@ -15,7 +15,7 @@ cd src
 make
 ```
 
-After that is done, reload the packages in the NSO command line:
+Reload the packages in the NSO command line:
 
 ```bash
 packages reload
