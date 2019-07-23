@@ -1,6 +1,6 @@
-# NSO Service with device groups and external REST integration
+# NSO Service with device groups and external integration
 
-This example shows how an external REST call can be done in a NSO service, and to apply a configuration to a group of devices.
+This example shows how an external HTTP call can be done in a NSO service, and to apply a configuration to a group of devices.
 
 **For training purposes only, do not use this code as it is in production**
 
