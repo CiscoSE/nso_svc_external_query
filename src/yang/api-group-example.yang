@@ -1,0 +1,54 @@
+module api-group-example {
+
+  namespace "http://example.com/api-group-example";
+  prefix api-group-example;
+
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import tailf-common {
+    prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+  description
+    "REST API Example";
+
+  revision 2016-01-01 {
+    description
+      "Initial revision.";
+  }
+
+  list api-group-example {
+    description "This is an REST API Example service";
+
+    key name;
+    leaf name {
+      tailf:info "Unique service id";
+      tailf:cli-allow-range;
+      type string;
+    }
+
+    uses ncs:service-data;
+    ncs:servicepoint api-group-example-servicepoint;
+
+    list deviceGroups {
+      key name;
+      leaf name {
+        type leafref {
+            path "/ncs:devices/ncs:device-group/ncs:name";
+        }
+      }
+      leaf-list devices {
+        type string;
+      }
+      // replace with your own stuff here
+      leaf loopbackDescription {
+        type string;
+      }
+    }
+  }
+}
+

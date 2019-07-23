@@ -1,0 +1,25 @@
+<config-template xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <!-- For each device group -->
+    
+      <!-- For each device in group -->
+      <device>
+        <name>{/deviceGroups/devices}</name>
+        <config tags="merge">
+          <interface xmlns="urn:ios">
+            <Loopback>
+              <name>0</name>
+              <description>{../loopbackDescription}</description>
+            </Loopback>
+          </interface>
+          <interface xmlns="http://tail-f.com/ned/cisco-ios-xr">
+            <Loopback>
+              <id>0</id>
+              <description>{../loopbackDescription}</description>
+            </Loopback>
+          </interface>
+        </config>
+      </device>
+
+  </devices>
+</config-template>
