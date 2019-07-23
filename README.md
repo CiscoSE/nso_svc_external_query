@@ -10,6 +10,7 @@ In your NSO packages running directory clone the repo and run make
 
 ```bash
 git clone https://github.com/CiscoSE/nso_svc_external_query.git
+mv nso_svc_external_query api_group_example
 cd src
 make
 ```
